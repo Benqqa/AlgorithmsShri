@@ -16,7 +16,6 @@ export function dfs(tree)
     result.push(tree.val)
     recFun(result, tree.left)
     recFun(result, tree.right)
-    console.log(result);
 
     return result
 }
