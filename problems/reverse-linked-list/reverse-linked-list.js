@@ -15,12 +15,10 @@ export function reverseList(head) {
     head.next = null
     leftNode = head;
     while (currentNode !== null) {
-        // if (currentNode !== null) {
             rightNode = currentNode.next;
             currentNode.next = leftNode
             leftNode = currentNode
             currentNode = rightNode;
-        // }
     }
 
     return leftNode
