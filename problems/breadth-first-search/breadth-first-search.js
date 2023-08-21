@@ -9,8 +9,18 @@
  * }
  */
 
-export function bfs(tree) {
+export function bfs(tree)
+{
     const result = [];
+    let q = [tree];
+    while (q.length) {
+        let node = q.shift()
+        if (node !== null) {
+            result.push(node.val);
+            q.push(node.left);
+            q.push(node.right)
+        }
+    }
 
     return result;
 }
