@@ -9,5 +9,19 @@
  */
 
 export function reverseList(head) {
+    let leftNode ={}
+    let rightNode = {}
+    let currentNode = head.next
+    head.next = null
+    leftNode = head;
+    while (currentNode !== null) {
+        // if (currentNode !== null) {
+            rightNode = currentNode.next;
+            currentNode.next = leftNode
+            leftNode = currentNode
+            currentNode = rightNode;
+        // }
+    }
 
+    return leftNode
 }
