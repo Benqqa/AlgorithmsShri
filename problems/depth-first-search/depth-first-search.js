@@ -10,6 +10,23 @@
  * }
  */
 
-export function dfs(tree) {
+export function dfs(tree)
+{
+    let result = [];
+    result.push(tree.val)
+    recFun(result, tree.left)
+    recFun(result, tree.right)
+    console.log(result);
 
+    return result
+}
+
+function recFun(result, node)
+{
+    if (node !== null)
+    {
+        result.push(node.val)
+        recFun(result, node.left)
+        recFun(result, node.right)
+    }
 }
